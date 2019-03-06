@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.bottom_navigation_documents:
                 fragment = new DocumentsFragment();
                 break;
+
+            default:
+                break;
         }
         return this.loadFragment(fragment);
     }

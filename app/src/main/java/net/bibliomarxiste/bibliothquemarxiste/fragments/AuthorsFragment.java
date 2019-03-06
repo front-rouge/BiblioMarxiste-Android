@@ -10,13 +10,12 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 
 import net.bibliomarxiste.bibliothquemarxiste.R;
-import net.bibliomarxiste.bibliothquemarxiste.adapter.ImgAdapter;
+import net.bibliomarxiste.bibliothquemarxiste.adapter.ItemAdapter;
 import net.bibliomarxiste.bibliothquemarxiste.utils.Item;
 
 import java.util.ArrayList;
 
 public class AuthorsFragment extends Fragment {
-    private GridView gridView;
     private ArrayList<Item> itemList;
 
     @Nullable
@@ -24,11 +23,11 @@ public class AuthorsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.authors_fragment, null);
 
-        this.gridView = (GridView) view;
+        GridView gridView = (GridView) view;
         this.itemList = new ArrayList<>();
         this.populateGrid();
 
-        this.gridView.setAdapter(new ImgAdapter(this.getContext(), this.itemList, 300, 400));
+        gridView.setAdapter(new ItemAdapter(this.getContext(), this.itemList, 300, 400));
 
         return view;
     }
