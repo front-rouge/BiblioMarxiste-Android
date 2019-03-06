@@ -1,4 +1,4 @@
-package net.bibliomarxiste.bibliothquemarxiste;
+package net.bibliomarxiste.bibliothquemarxiste.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 
+import net.bibliomarxiste.bibliothquemarxiste.R;
 import net.bibliomarxiste.bibliothquemarxiste.adapter.ImgAdapter;
 import net.bibliomarxiste.bibliothquemarxiste.utils.Item;
 
