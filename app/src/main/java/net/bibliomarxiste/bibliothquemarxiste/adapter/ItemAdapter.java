@@ -1,14 +1,12 @@
 package net.bibliomarxiste.bibliothquemarxiste.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
-import net.bibliomarxiste.bibliothquemarxiste.ListTextActivity;
 import net.bibliomarxiste.bibliothquemarxiste.utils.Item;
 
 import java.util.ArrayList;
@@ -52,15 +50,6 @@ public class ItemAdapter extends BaseAdapter {
             imgView = new ImageView(this.context);
             imgView.setLayoutParams(new GridView.LayoutParams(this.w, this.h));
             imgView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-
-            imgView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(context, ListTextActivity.class);
-                    intent.putExtra("data", itemList.get(position).getName());
-                    context.startActivity(intent);
-                }
-            });
         }
         imgView.setImageResource(this.itemList.get(position).getRes());
         return imgView;
