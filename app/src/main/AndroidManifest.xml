@@ -24,6 +24,10 @@
             android:label="@string/app_name"
             android:parentActivityName=".MainActivity">
         </activity>
+        <activity
+            android:name=".ReadActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".ListTextActivity"></activity>
     </application>
 
 </manifest>
