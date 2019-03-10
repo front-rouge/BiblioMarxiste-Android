@@ -16,12 +16,10 @@ public class EntryAdapter extends BaseAdapter {
 
     private static final int TYPE_HEADER = 0;
     private static final int TYPE_ENTRY = 1;
-    private Context context;
     private ArrayList<Object> entries;
     private LayoutInflater inflater;
 
     public EntryAdapter(Context context, ArrayList<Object> entries) {
-        this.context = context;
         this.entries = entries;
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
