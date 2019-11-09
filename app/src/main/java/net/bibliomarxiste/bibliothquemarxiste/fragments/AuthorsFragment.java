@@ -10,20 +10,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-
+import java.util.ArrayList;
 import net.bibliomarxiste.bibliothquemarxiste.ListTextActivity;
 import net.bibliomarxiste.bibliothquemarxiste.R;
 import net.bibliomarxiste.bibliothquemarxiste.adapter.ItemAdapter;
 import net.bibliomarxiste.bibliothquemarxiste.utils.Item;
-
-import java.util.ArrayList;
 
 public class AuthorsFragment extends Fragment {
     private ArrayList<Item> itemList;
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+            @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.authors_fragment, null);
 
         GridView gridView = (GridView) view;

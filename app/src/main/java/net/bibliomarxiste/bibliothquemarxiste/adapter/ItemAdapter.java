@@ -6,23 +6,21 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
-
-import net.bibliomarxiste.bibliothquemarxiste.utils.Item;
-
 import java.util.ArrayList;
+import net.bibliomarxiste.bibliothquemarxiste.utils.Item;
 
 public class ItemAdapter extends BaseAdapter {
 
     private Context context;
     private ArrayList<Item> itemList;
-    private int w;
-    private int h;
+    private int width;
+    private int height;
 
-    public ItemAdapter(Context context, ArrayList<Item> itemList, int w, int h) {
+    public ItemAdapter(Context context, ArrayList<Item> itemList, int width, int height) {
         this.context = context;
         this.itemList = itemList;
-        this.w = w;
-        this.h = h;
+        this.width = width;
+        this.height = height;
     }
 
     @Override
@@ -48,7 +46,7 @@ public class ItemAdapter extends BaseAdapter {
         imgView = (ImageView) convertView;
         if (convertView == null) {
             imgView = new ImageView(this.context);
-            imgView.setLayoutParams(new GridView.LayoutParams(this.w, this.h));
+            imgView.setLayoutParams(new GridView.LayoutParams(this.width, this.height));
             imgView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         }
         imgView.setImageResource(this.itemList.get(position).getRes());

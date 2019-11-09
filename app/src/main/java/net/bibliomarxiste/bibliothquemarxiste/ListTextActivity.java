@@ -3,18 +3,18 @@ package net.bibliomarxiste.bibliothquemarxiste;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.util.Xml;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
-import net.bibliomarxiste.bibliothquemarxiste.adapter.EntryAdapter;
-import net.bibliomarxiste.bibliothquemarxiste.utils.Entry;
-
-import org.xmlpull.v1.XmlPullParser;
-
 import java.io.InputStream;
 import java.util.ArrayList;
+import net.bibliomarxiste.bibliothquemarxiste.adapter.EntryAdapter;
+import net.bibliomarxiste.bibliothquemarxiste.utils.Entry;
+import org.xmlpull.v1.XmlPullParser;
+
+
 
 public class ListTextActivity extends AppCompatActivity {
 
@@ -24,8 +24,6 @@ public class ListTextActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_list_text);
-
-        ListView listView = (ListView) findViewById(R.id.listView);
 
         this.entries = new ArrayList<>();
 
@@ -52,6 +50,7 @@ public class ListTextActivity extends AppCompatActivity {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG);
             Log.e("><", e.getLocalizedMessage());
         }*/
+        ListView listView = (ListView) findViewById(R.id.listView);
 
         listView.setAdapter(new EntryAdapter(this, this.entries));
 
@@ -76,9 +75,7 @@ public class ListTextActivity extends AppCompatActivity {
             xmlParser.setInput(in, null);
             xmlParser.nextTag();
         } catch (Exception e) {
-
-        } finally {
-
+            Log.e("><", e.getLocalizedMessage());
         }
     }
 }

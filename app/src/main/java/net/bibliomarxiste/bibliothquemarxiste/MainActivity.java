@@ -10,7 +10,8 @@ import android.view.MenuItem;
 
 import net.bibliomarxiste.bibliothquemarxiste.adapter.ViewPagerAdapter;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener {
+public class MainActivity extends AppCompatActivity
+        implements BottomNavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener {
     BottomNavigationView navigation;
     private ViewPager viewPager;
     private MenuItem prevMenuItem;
@@ -30,7 +31,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     }
 
     private boolean loadFragment(Fragment fragment) {
-        if (fragment == null) return false;
+        if (fragment == null) {
+            return false;
+        }
         this.getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragment_container, fragment)
@@ -42,7 +45,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public boolean onNavigationItemSelected(@Nullable MenuItem item) {
         Fragment fragment = null;
 
-        if (item == null) return false;
+        if (item == null) {
+            return false;
+        }
 
         switch (item.getItemId()) {
             case R.id.bottom_navigation_authors:
