@@ -1,11 +1,11 @@
 package net.bibliomarxiste.bibliothquemarxiste;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import net.bibliomarxiste.bibliothquemarxiste.adapter.ViewPagerAdapter;
